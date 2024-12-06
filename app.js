@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 app.get("/", (request, response) => {
+  console.log("Hello from server!");
   response.json({ message: "Hello from server!" });
 });
 
