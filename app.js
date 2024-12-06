@@ -19,6 +19,7 @@ const REDIRECT_URI = 'https://serverless.on-demand.io/apps/commoditiesapi/auth/i
 
 // Step 1: Start the login process
 app.get('/auth/instagram', (req, res) => {
+    console.log(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
     const authURL = `https://www.instagram.com/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=instagram_business_basic,instagram_business_manage_messages,instagram_business_manage_comments,instagram_business_content_publish&response_type=code`;
     res.redirect(authURL);
 });
